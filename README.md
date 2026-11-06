@@ -26,7 +26,7 @@ I own systems end to end: product conversations, architecture, implementation, r
 
 ## Why there is no public code here
 
-Everything I have built in the last ten years is commercial and private. The contribution graph reflects that private work. I am happy to walk through any of these systems' architecture in a call, and I am working on written engineering notes for the problems above.
+Everything I have built in the last ten years is commercial and private. The contribution graph reflects that private work. I am happy to walk through any of these systems' architecture in a call.
 
 ## Contact
 
