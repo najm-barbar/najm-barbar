@@ -7,16 +7,16 @@ Ten years in, solo owner of production systems since 2020, fully remote since 20
 
 | Product | What it is | My role |
 |---|---|---|
-| [Perfogram Studio](https://studio.perfogram.ai) | Live-broadcast studio (StreamYard-class): hosts, guests, overlays, polls and quizzes on a virtual stage streamed to YouTube, RTMP and HLS. White-labelled for three brands. | Sole backend engineer since 2020; 48 Cloud Functions, the Agora RTC stack, distribution pipeline and the 2026 AI features. |
+| [Perfogram Studio](https://studio.perfogram.ai) | Live-broadcast studio (StreamYard-class): hosts, guests, overlays, polls and quizzes on a virtual stage streamed to YouTube, RTMP and HLS. White-labelled for three brands. | Sole backend engineer and main author of the web client since 2020; 48 Cloud Functions, the Agora RTC stack, distribution pipeline and the 2026 AI features. |
 | [Kroot](https://playkroot.com) | Multiplayer card-game platform for the MENA market: Trix, Tarneeb, Hand and Banakil on one shell, web and native apps. | Sole engineer. Server-authoritative engines with AI opponents, native shell with a versioned web bridge, economy, ads and IAP. |
 | No Laugh (ممنوع تضحك) | Flutter "don't laugh" game: ML Kit smile detection ends the round, face-to-face duels over Agora video. | Specified, directed and reviewed an AI-built codebase; shipped to iOS and Android. |
-| Guess the Flag (تحدّي الأعلام) | Offline-first Arabic flag quiz with a custom Arabic keyboard and phonetic answer matching; 1v1 online play with a bot fallback. | Same AI-directed delivery, with a pure TypeScript match reducer mirrored line-for-line in Dart and kept identical by golden tests. |
+| Guess the Flag (تحدّي الأعلام) | Offline-first Arabic flag quiz with a custom Arabic keyboard and phonetic answer matching; 1v1 online play with a bot fallback. | Same AI-directed delivery, with a pure TypeScript match reducer mirrored in Dart so bot matches follow the same rules as online ones. |
 
 ## Things I am proud of
 
 - Cut Perfogram's end-of-broadcast teardown from 13–36 seconds to about 3 by reworking the recording choreography, and brought the go-live intro into sync with a pre-warmed cloud player.
-- Designed Kroot's native-shell bridge: an append-only, capability-gated protocol with a remote kill switch, so the web app ships daily while App Store builds lag behind. CI rejects breaking changes.
-- Took a Firebase bill apart before launch and removed roughly 840k Firestore reads a day at the design load by replacing listener stacks and heartbeats with event-driven state.
+- Designed Kroot's native-shell bridge: an append-only, capability-gated protocol with a remote kill switch, so the web app ships daily while App Store builds lag behind.
+- Took Kroot's Firebase bill apart before launch: replaced the lobby's always-on listener stack and heartbeat with a summary document and event-driven presence, cutting idle Firestore reads 10–40× and heartbeat function calls from about 24,000 to 4,000 a minute at the 10k-DAU design load.
 - Built live host transcription over the OpenAI realtime API and an in-studio assistant whose tool calls execute in the browser, with per-account gating and a cost ledger.
 - Traced a "video loader stuck" bug across React stale closures and the Agora SDK's mute semantics, and replaced the publish chain with a serial track-sync queue.
 
